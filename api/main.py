@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routes import router
-
-app = FastAPI()
+desc="This is the backend for the Darshini project, a language learning assistant focused on South Indian languages. It provides APIs for text translation, audio generation, and interactive learning workflows."
+app = FastAPI(
+    description=desc
+)
 
 # Configure CORS to allow requests from your Chrome extension
 app.add_middleware(
